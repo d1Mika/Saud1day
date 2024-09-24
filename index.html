@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اليوم الوطني السعودي ٩٤</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #e6f7e6, #e6ffe6);
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(to right, #006400, #008000);
+            color: white;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0.5rem;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+        }
+
+        nav button:hover {
+            color: #e6ffe6;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .card-header {
+            background: linear-gradient(to right, #008000, #006400);
+            color: white;
+            padding: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .grid-cols-1 {
+            grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 768px) {
+            .grid-cols-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .grid-cols-3 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .achievement, .project {
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+        }
+
+        .achievement img, .project img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+        }
+
+        footer {
+            background: linear-gradient(to right, #006400, #008000);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 0.5rem;
+            max-width: 80%;
+        }
+
+        .modal img {
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+        }
+
+        .close {
+            color: #aaa;
+            float: left;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #000;
+        }
+
+        .text-green {
+            color: #006400;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>اليوم الوطني السعودي ٩٤</h1>
+        <p>نحلم ونحقق</p>
+        <nav>
+            <ul>
+                <li><button onclick="showComingSoon()">لماذا نحتفل باليوم الوطني</button></li>
+                <li><button onclick="showComingSoon()">تاريخ المملكة</button></li>
+                <li><button onclick="showComingSoon()">ملوك المملكة</button></li>
+                <li><button onclick="showComingSoon()">رؤية 2030</button></li>
+                <li><button onclick="showComingSoon()">إنجازات المملكة</button></li>
+                <li><button onclick="showComingSoon()">المشاريع الكبرى</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">لماذا نحتفل باليوم الوطني</h2>
+            </div>
+            <div class="card-content">
+                <img src="/placeholder.svg" alt="اليوم الوطني" onclick="openModal(this.src)" style="width: 100%; max-width: 400px; height: auto; border-radius: 0.5rem; margin-bottom: 1rem; cursor: pointer;">
+                <p>نحتفل باليوم الوطني السعودي لعدة أسباب مهمة:</p>
+                <ul>
+                    <li>إحياء <span class="text-green">ذكرى توحيد المملكة</span> على يد الملك عبد العزيز آل سعود في 23 سبتمبر 1932</li>
+                    <li>تعزيز <span class="text-green">الهوية الوطنية</span> والانتماء للوطن وترسيخ قيم الولاء والوحدة</li>
+                    <li>الاحتفال <span class="text-green">بإنجازات المملكة</span> وتطورها على مر السنين في مختلف المجالات</li>
+                    <li>تجديد <span class="text-green">الولاء للقيادة</span> والوطن وتأكيد الالتزام بمواصلة مسيرة التنمية والتقدم</li>
+                    <li>فرصة لتعريف <span class="text-green">الأجيال الجديدة</span> بتاريخ المملكة وتراثها وقيمها الأصيلة</li>
+                    <li>تعزيز <span class="text-green">الترابط الاجتماعي</span> وروح الفخر الوطني بين المواطنين</li>
+                    <li>إبراز <span class="text-green">مكانة المملكة</span> الإقليمية والدولية وإنجازاتها في مختلف المجالات</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">تاريخ المملكة</h2>
+            </div>
+            <div class="card-content">
+                <img src="/placeholder.svg" alt="تاريخ المملكة" onclick="openModal(this.src)" style="width: 100%; max-width: 400px; height: auto; border-radius: 0.5rem; margin-bottom: 1rem; cursor: pointer;">
+                <h3 class="text-green">أهم الأحداث التاريخية:</h3>
+                <ul>
+                    <li><span class="text-green">1744:</span> تأسيس الدولة السعودية الأولى بقيادة الإمام محمد بن سعود</li>
+                    <li><span class="text-green">1824:</span> تأسيس الدولة السعودية الثانية بقيادة الإمام تركي بن عبد الله بن محمد</li>
+                    <li><span class="text-green">1902:</span> استعادة الرياض على يد الملك عبد العزيز وبداية توحيد المملكة</li>
+                    <li><span class="text-green">1932:</span> إعلان توحيد المملكة العربية السعودية رسمياً</li>
+                    <li><span class="text-green">1938:</span> اكتشاف النفط في المنطقة الشرقية وبداية عصر جديد من التنمية</li>
+                    <li><span class="text-green">1960:</span> تأسيس منظمة الدول المصدرة للنفط (أوبك) بمشاركة المملكة</li>
+                    <li><span class="text-green">2005:</span> انضمام المملكة إلى منظمة التجارة العالمية</li>
+                    <li><span class="text-green">2016:</span> إطلاق رؤية المملكة 2030 للتنمية والتطوير الشامل</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">ملوك المملكة</h2>
+            </div>
+            <div class="card-content">
+                <img src="/placeholder.svg" alt="ملوك المملكة" onclick="openModal(this.src)" style="width: 100%; max-width: 400px; height: auto; border-radius: 0.5rem; margin-bottom: 1rem; cursor: pointer;">
+                <ul>
+                    <li><span class="text-green">الملك عبد العزيز آل سعود (1932-1953):</span> مؤسس المملكة الحديثة</li>
+                    <li><span class="text-green">الملك سعود بن عبد العزيز آل سعود (1953-1964):</span> أول وزير للمعارف</li>
+                    <li><span class="text-green">الملك فيصل بن عبد العزيز آل سعود (1964-1975):</span> رائد التنمية والتحديث</li>
+                    <li><span class="text-green">الملك خالد بن عبد العزيز آل سعود (1975-1982):</span> قائد النهضة الاقتصادية</li>
+                    <li><span class="text-green">الملك فهد بن عبد العزيز آل سعود (1982-2005):</span> خادم الحرمين الشريفين</li>
+                    <li><span class="text-green">الملك عبد الله بن عبد العزيز آل سعود (2005-2015):</span> مؤسس الحوار الوطني</li>
+                    <li><span class="text-green">الملك سلمان بن عبد العزيز آل سعود (2015-الآن):</span> قائد التحول والرؤية</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">رؤية 2030</h2>
+            </div>
+            <div class="card-content">
+                <img src="/placeholder.svg" alt="رؤية 2030" onclick="openModal(this.src)" style="width: 100%; max-width: 400px; height: auto; border-radius: 0.5rem; margin-bottom: 1rem; cursor: pointer;">
+                <p><span class="text-green">رؤية المملكة 2030</span> هي خطة طموحة لتحويل المملكة وتنويع اقتصادها. تشمل أهدافها الرئيسية:</p>
+                <ul>
+                    <li>زيادة مساهمة <span class="text-green">القطاع الخاص</span> في الاقتصاد من 40% إلى 65% من إجمالي الناتج المحلي</li>
+                    <li>رفع نسبة <span class="text-green">الصادرات غير النفطية</span> من 16% إلى 50% من إجمالي الناتج المحلي غير النفطي</li>
+                    <li>زيادة مشاركة <span class="text-green">المرأة</span> في سوق العمل من 22% إلى 30%</li>
+                    <li>تخفيض معدل <span class="text-green">البطالة</span> من 11.6% إلى 7%</li>
+                    <li>رفع تصنيف المملكة في مؤشر <span class="text-green">الحكومات الإلكترونية</span> من المرتبة 36 إلى المراتب الـ 5 الأولى</li>
+                    <li>زيادة الطاقة الاستيعابية لاستقبال <span class="text-green">ضيوف الرحمن المعتمرين</span> من 8 ملايين إلى 30 مليون معتمر سنوياً</li>
+                    <li>رفع نسبة ممارسي <span class="text-green">الرياضة</span> مرة على الأقل أسبوعياً من 13% إلى 40% من إجمالي السكان</li>
+                    <li>رفع إنفاق الأسر على <span class="text-green">الثقافة والترفيه</span> داخل المملكة من 2.9% إلى 6%</li>
+                    <li>رفع نسبة <span class="text-green">المدخرات</span> من إجمالي الناتج المحلي للأسر من 6% إلى 10%</li>
+                    <li>رفع مساهمة <span class="text-green">المنشآت الصغيرة والمتوسطة</span> في إجمالي الناتج المحلي من 20% إلى 35%</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">إنجازات المملكة</h2>
+            </div>
+            <div class="card-content">
+                <div class="grid grid-cols-3">
+                    <div class="achievement">
+                        <img src="/placeholder.svg" alt="تطوير البنية التحتية" onclick="openModal(this.src)">
+                        <p class="text-green">تطوير البنية التحتية وشبكات النقل</p>
+                    </div>
+                    <div class="achievement">
+                        <img src="/placeholder.svg" alt="تحسين جودة التعليم" onclick="openModal(this.src)">
+                        <p class="text-green">تحسين جودة التعليم والرعاية الصحية</p>
+                    </div>
+                    <div class="achievement">
+                        <img src="/placeholder.svg" alt="تنويع الاقتصاد" onclick="openModal(this.src)">
+                        <p class="text-green">تنويع الاقتصاد وتقليل الاعتماد على النفط</p>
+                    </div>
+                    <div class="achievement">
+                        <img src="/placeholder.svg" alt="تعزيز مكانة المملكة" onclick="openModal(this.src)">
+                        <p class="text-green">تعزيز مكانة المملكة على الساحة الدولية</p>
+                    </div>
+                    <div class="achievement">
+                        <img src="/placeholder.svg" alt="تطوير قطاع الطاقة المتجددة" onclick="openModal(this.src)">
+                        <p class="text-green">تطوير قطاع الطاقة المتجددة</p>
+                    </div>
+                    <div class="achievement">
+                        <img src="/placeholder.svg" alt="إطلاق برنامج الفضاء السعودي" onclick="openModal(this.src)">
+                        <p class="text-green">إطلاق برنامج الفضاء السعودي</p>
+                    </div>
+                    <div class="achievement">
+                        <img src="/placeholder.svg" alt="تطوير القطاع الرياضي" onclick="openModal(this.src)">
+                        <p class="text-green">تطوير القطاع الرياضي والترفيهي</p>
+                    </div>
+                    <div class="achievement">
+                        <img src="/placeholder.svg" alt="إنشاء صندوق الاستثمارات العامة" onclick="openModal(this.src)">
+                        <p class="text-green">إنشاء صندوق الاستثمارات العامة</p>
+                    </div>
+                    <div class="achievement">
+                        <img src="/placeholder.svg" alt="تطوير قطاع السياحة" onclick="openModal(this.src)">
+                        <p class="text-green">تطوير قطاع السياحة الداخلية والدولية</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">المشاريع الكبرى</h2>
+            </div>
+            <div class="card-content">
+                <div class="grid grid-cols-2">
+                    <div class="project">
+                        <img src="/placeholder.svg" alt="مشروع نيوم" onclick="openModal(this.src)">
+                        <h3 class="text-green">مشروع نيوم</h3>
+                        <p>مدينة المستقبل التي تجمع بين التكنولوجيا المتقدمة والاستدامة البيئية، وتشمل مشاريع فرعية مثل "ذا لاين" و"تروجينا" و"أوكسجون".</p>
+                    </div>
+                    <div class="project">
+                        <img src="/placeholder.svg" alt="مشروع البحر الأحمر" onclick="openModal(this.src)">
+                        <h3 class="text-green">مشروع البحر الأحمر</h3>
+                        <p>وجهة سياحية فاخرة تركز على الاستدامة والحفاظ على البيئة الطبيعية، وتضم جزراً بكراً وشواطئ خلابة.</p>
+                    </div>
+                    <div class="project">
+                        <img src="/placeholder.svg" alt="مشروع القدية" onclick="openModal(this.src)">
+                        <h3 class="text-green">مشروع القدية</h3>
+                        <p>مدينة ترفيهية ورياضية وثقافية ضخمة تهدف إلى تعزيز قطاع الترفيه في المملكة، وتشمل مدن ملاهي ومرافق رياضية عالمية.</p>
+                    </div>
+                    <div class="project">
+                        <img src="/placeholder.svg" alt="مشروع أمالا" onclick="openModal(this.src)">
+                        <h3 class="text-green">مشروع أمالا</h3>
+                        <p>وجهة سياحية فاخرة على ساحل البحر الأحمر تركز على الصحة والعافية، وتقدم تجارب فريدة في مجال الفنون والثقافة.</p>
+                    </div>
+                    <div class="project">
+                        <img src="/placeholder.svg" alt="مشروع المكعب" onclick="openModal(this.src)">
+                        <h3 class="text-green">مشروع المكعب (ذا كيوب)</h3>
+                        <p>مبنى فريد على شكل مكعب في وسط الرياض، يضم مساحات للمكاتب والفنادق والمطاعم، ويعد معلماً معمارياً مميزاً.</p>
+                    </div>
+                    <div class="project">
+                        <img src="/placeholder.svg" alt="مشروع ذا لاين" onclick="openModal(this.src)">
+                        <h3 class="text-green">مشروع ذا لاين</h3>
+                        <p>مدينة خطية ثورية بدون سيارات وبدون انبعاثات كربونية، جزء من مشروع نيوم، وتمتد لمسافة 170 كم بتقنيات مستقبلية.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© <span id="current-year"></span> جميع الحقوق محفوظة لـ عبدالملك إسماعيل العربي والطلاب المشاركين معه: عبدالله وليد ووسام المجنوني</p>
+        <button onclick="showInfo()">اليوم الوطني ٩٤</button>
+    </footer>
+
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="صورة مكبرة">
+        </div>
+    </div>
+
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeInfoModal()">&times;</span>
+            <h2>معلومات عن الموقع</h2>
+            <p>تمت برمجة هذا الموقع من قبل عبد الملك إسماعيل العربي</p>
+        </div>
+    </div>
+
+    <div id="comingSoonModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeComingSoonModal()">&times;</span>
+            <h2>قريباً</h2>
+            <p>هذه الميزة قيد التطوير وستكون متاحة قريباً.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        function openModal(imgSrc) {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImg.src = imgSrc;
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+
+        function showInfo() {
+            document.getElementById("infoModal").style.display = "block";
+        }
+
+        function closeInfoModal() {
+            document.getElementById("infoModal").style.display = "none";
+        }
+
+        function showComingSoon() {
+            document.getElementById("comingSoonModal").style.display = "block";
+        }
+
+        function closeComingSoonModal() {
+            document.getElementById("comingSoonModal").style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == document.getElementById("imageModal")) {
+                closeModal();
+            }
+            if (event.target == document.getElementById("infoModal")) {
+                closeInfoModal();
+            }
+            if (event.target == document.getElementById("comingSoonModal")) {
+                closeComingSoonModal();
+            }
+        }
+    </script>
+</body>
+</html>
